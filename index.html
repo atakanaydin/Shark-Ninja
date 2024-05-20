@@ -7,39 +7,273 @@
     <meta name="author" content="Shark Ninja">
     <title>Ninja Karaca</title>
 
-    <!-- Custom styles for this demo page -->
     <link href="styles/main.css" rel="stylesheet">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
-      #video-background {
-  min-width: 100%; 
-  min-height: 100%;
-  z-index: -1;
-}
+      header {
+        position: relative;
+        background-color: black;
+        overflow: hidden;
+      }
 
+      header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+      }
+
+      header .overlayText {
+        position: relative;
+        z-index: 2;
+      }
+
+      header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.88;
+        z-index: 1;
+      }
+      #mc_embed_signup {
+      clear: left;
+      font: 14px Helvetica, Arial, sans-serif;
+      width: 400px;
+    }
+
+    #mc-embedded-subscribe-form input[type=checkbox] {
+      display: inline;
+      width: auto;
+      margin-right: 10px;
+    }
+    #mc-embedded-subscribe {
+    margin: 0px;
+}
+    #mergeRow-gdpr {
+      margin-top: 20px;
+    }
+    #mc_embed_shell {
+      display: inline-block;
+    }
+
+    #mergeRow-gdpr fieldset label {
+      font-weight: normal;
+    }
+
+    #mc-embedded-subscribe-form .mc_fieldset {
+      border: none;
+      min-height: 0px;
+      padding-bottom: 0px;
+    }
+    .form-control {
+      color: black;
+    }
+    .form-control:focus {
+      color: black;
+    }
+    #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+
+    background-color: rgb(255 255 255 / 0%);
+}
+.rizametin {
+  color: white;
+  text-decoration: none;
+}
+@media (max-width: 767.98px) {
+    .mt-mobile {
+        margin-top: 100px; /* İstediğiniz değeri buraya girin */
+    }
+}
     </style>
   </head>
   <body>
 
-    <header>
-      <div class="position-absolute top-50 w-100">
-          <h1 class="text-white text-center">Overlay Text</h1>
+    <header class="container-fluid min-vh-100 text-white">
+      <div class="overlay"></div>
+  
+      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="position-absolute end-0 bottom-0 h-auto w-auto">
+        <source src="video/shark-ninja-video-bg.mp4" type="video/mp4">
+      </video>
+
+        <div class="overlayText col-md-6 p-lg-1 p-sm-5 mx-auto">
+          <h1 class="display-4 fw-normal opacity-0">Shark Ninja</h1>
+          <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
+          <h4>Build for life. <br>Made for you.</h4>
+        </div>
+        <div class="overlayText col-md-6 p-lg-1 p-sm-5 mx-auto mt-mobile text-center">
+          <h2 class="fs-2">ÇOK YAKINDA TÜRKİYE'DE</h2>
+
+          <div id="mc_embed_shell">
+            <div id="mc_embed_signup">
+              <form action="https://sharkninja.us22.list-manage.com/subscribe/post?u=f9e07c8a8541fb4af3063fb10&amp;id=ddedd24029&amp;v_id=20&amp;f_id=0050c8e1f0"
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                <div id="mc_embed_signup_scroll">
+                  <h2 class="fw-normal">Fırsatlardan İlk Siz Haberdar Olun</h2>
+                  <div class="mc-field-group w-100">
+                    <label for="mce-EMAIL">Email Adresi <span class="asterisk">*</span></label>
+                    <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" required value="">
+                  </div>
+                  <div class="mc-field-group w-100">
+                    <label for="mce-FNAME">Ad Soyad</label>
+                    <input type="text" name="FNAME" class="text form-control form-control-lg" id="mce-FNAME" value="">
+                  </div>
+                  <div id="mergeRow-gdpr w-100" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                    <div class="content__gdpr">
+                      <label>İletişim Onayı</label>
+                      <p></p>
+                      <fieldset class="mc_fieldset gdprRequired mc-field-group form-check" name="interestgroup_field">
+                        <label class="checkbox subfield form-check-label" for="gdpr_465">
+                          <input type="checkbox" id="gdpr_465" name="gdpr[465]" class="gdpr form-check-input" value="Y">
+                          <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                           <u>Açık Rıza ve Aydınlatma metnini</u> okudum, onaylıyorum.
+                          </a>
+                        </label>
+                      </fieldset>
+                      <p></p>
+                    </div>
+                  </div>
+                  <div hidden>
+                    <input type="hidden" name="tags" value="5148">
+                  </div>
+                  <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none;"></div>
+                    <div class="response" id="mce-success-response" style="display:none;"></div>
+                  </div>
+                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                    <input type="text" name="b_f9e07c8a8541fb4af3063fb10_ddedd24029" tabindex="-1" value="">
+                  </div>
+                  <div class="clear">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-light w-100" value="Gönder">
+                  </div>
+                </div>
+                
+              </form>
+            </div>
+          </div>
+
+        </div>
+    </header>
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Açık Rıza ve Aydınlatma Metni</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            E-BÜLTEN  AÇIK RIZA METNİ 
+
+            Evtek Küçük Ev Aletleri Sanayi Ve Ticaret Anonim Şirketi(“Şirket”) tarafından bilgime sunulan E-Bülten Aydınlatma Metni’ni okudum ve bilgilendim.   
+            
+            E-Bülten Aydınlatma Metni’nin sınırları çerçevesinde; reklam / kampanya / promosyon süreçlerinin yürütülmesi, ürün / hizmetlerin pazarlama süreçlerinin yürütülmesi ve iletişim faaliyetlerinin yürütülmesi amaçlarıyla sınırlı olarak verdiğim iletişim bilgileri üzerinden Şirket tarafından ticari elektronik ileti gönderilmesine ve bu gönderimin yapılabilmesi için kişisel verilerimin Şirket’in tedarikçilerine (örn. aracı hizmet sağlayıcılarına) aktarılmasına açık rızam vardır.  
+            
+            Ticari elektronik ileti gönderimi hiçbir surette açık rızanız olmadan yapılmayacaktır. Bu konudaki karar tamamen takdirinizde olup bu konuda tarafınıza bir zorlamada bulunulmamaktadır. Seçiminiz bizler ile olan ilişkinizde herhangi bir olumsuzluğa yol açmayacaktır.  
+            
+            Tarafınıza ticari elektronik ileti gönderilmesine ilişkin açık rızanızın olmaması durumunda her zaman Şirketimiz ile ilgili gelişmelere, etkinliklere Facebook, Twitter, Instagram, Tiktok, Linkedin hesaplarımızdan ve internet sitemizden ulaşabilirsiniz. 
+            
+            E-BÜLTEN  AYDINLATMA METNİ 
+            
+            Aşağıda yer alan Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni’ni okuyarak kişisel verilerinizi işleme amaçlarımızı ve bu kapsamda haklarınızı ayrıntılarıyla incelemenizi rica ediyoruz. 
+            
+            a) Veri Sorumlusu 
+            
+            6698 sayılı Kişisel Verilerin Korunması Kanunu (“KVKK”) uyarınca, kişisel verileriniz; veri sorumlusu olarak Evtek Küçük Ev Aletleri Sanayi ve Ticaret Anonim Şirketi (“Şirket”) tarafından aşağıda açıklanan kapsamda işlenmektedir. 
+            
+            b) Kişisel Verilerin İşlenme Amaçları, Toplama Yöntemleri ve Hukuki Sebepleri 
+            
+            İşlemeye Konu Kişisel Veri Kategorileri ve Tipleri 
+            
+            Kişisel Verilerinizin Hangi Amaçlarla İşleneceği 
+            
+            Kişisel Verilerinizin Hangi Yöntemle Toplandığı ve Hukuki Sebebi 
+            
+            İletişim: E-Posta Adresi 
+            
+            Reklam / Kampanya / Promosyon Süreçlerinin Yürütülmesi, Ürün / Hizmetlerin Pazarlama Süreçlerinin Yürütülmesi, İletişim Faaliyetlerinin Yürütülmesi 
+            
+            http://www.sharkninja.com.tr/ internet sitesi üzerinden otomatik yollarla toplanan kişisel verileriniz  KVKK’nın 5. maddesinde belirtilen “açık rıza” hukuki sebebine dayanılarak işlenmektedir. 
+            
+            c) İşlenen Kişisel Verilerinizin Kimlere ve Hangi Amaçlarla Aktarılabileceği 
+            
+            Kişisel verileriniz; aşağıda yer verilen üçüncü taraflara ve belirtilen amaçlarla aktarılabilecektir: 
+            
+            Yurt İçinde Yerleşik Üçüncü Taraf 
+            
+            Aktarıma Konu Olabilecek Kişisel Veri Kategorileri ve Tipleri 
+            
+            Aktarım Amacı  
+            
+            Yetkili kamu kurum ve kuruluşları 
+            
+            İletişim: E-posta Adresi 
+            
+            Yetkili Kişi, Kurum Ve Kuruluşlara Bilgi Verilmesi 
+            
+            Tedarikçiler  
+            
+            İletişim: E-posta Adresi 
+            
+            Reklam / Kampanya / Promosyon Süreçlerinin Yürütülmesi, Ürün / Hizmetlerin Pazarlama Süreçlerinin Yürütülmesi, İletişim Faaliyetlerinin Yürütülmesi 
+            
+            d) İlgili Kişi Olarak KVKK Kapsamındaki Haklarınızla İlgili Bilgilendirme  
+            
+            İlgili kişi olarak, KVKK’nın ilgili kişinin haklarını düzenleyen 11. maddesi kapsamındaki taleplerinizi Veri Sorumlusuna Başvuru Usul ve Esasları Hakkında Tebliğ’e göre Cumhuriyet Mah. Yeni Yol 1 Sk. Now Bomonti No: 2 / 12 Şişli / İstanbul adresine yazılı olarak iletebilir veya kvkk@sharkninja.com.tr e-posta adresine e-posta yoluyla veya evtek@hs03.kep.tr kayıtlı elektronik posta (KEP) adresine iletebilirsiniz. 
+            
+            Elektronik ticari ileti gönderimi kapsamında vermiş olduğunuz onayınızı kvkk@sharkninja.com.tr adresine e-posta göndererek, tarafınıza gönderilen e-postaların altında yer alan “ebülten üyeliğinizi sonlandırmak için buraya tıklayın” butonunu tıklayarak veya 0850 433 43 30 iletişim numarasını arayarak her zaman geri alabilirsiniz.  
+          </div>
+        </div>
       </div>
-      <video autoplay muted loop id="myVideo">
-        <source src="video/shark-ninja-video-bg" type="video/mp4">
-    </video>
-  </header>
-
-<!-- <main class="container-fluid min-vh-100 d-flex bg-imgshark text-white text-sm-start">
-  <div class="col-md-8 p-lg-1 p-sm-5 mx-auto my-5">
-      <h1 class="display-4 fw-normal opacity-0">Shark Ninja</h1>
-      <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
-      <h4>Build for life <br>Made for you.</h4>
-      <h4 class="m-5 p-5 text-center fs-1">Coming Soon</h4>
-  </div>
-</main> -->
-
-    <!-- Some Bootstrap components require JavaScript. This file powers those components, but you should customize it so that
-         it includes only the modules your site needs. That will reduce file size and speed up page loads. -->
+    </div>
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+          <script>
+            (function($) {
+              window.fnames = new Array();
+              window.ftypes = new Array();
+              fnames[0] = 'EMAIL';
+              ftypes[0] = 'email';
+              fnames[1] = 'FNAME';
+              ftypes[1] = 'text';
+              fnames[2] = 'LNAME';
+              ftypes[2] = 'text';
+              /*
+               * Translated default messages for the $ validation plugin.
+               * Locale: TR
+               */
+              $.extend($.validator.messages, {
+                required: "Bu alanın doldurulması zorunludur.",
+                remote: "Lütfen bu alanı düzeltin.",
+                email: "Lütfen geçerli bir e-posta adresi giriniz.",
+                url: "Lütfen geçerli bir web adresi (URL) giriniz.",
+                date: "Lütfen geçerli bir tarih giriniz.",
+                dateISO: "Lütfen geçerli bir tarih giriniz(ISO formatında)",
+                number: "Lütfen geçerli bir sayı giriniz.",
+                digits: "Lütfen sadece sayısal karakterler giriniz.",
+                creditcard: "Lütfen geçerli bir kredi kartı giriniz.",
+                equalTo: "Lütfen aynı değeri tekrar giriniz.",
+                accept: "Lütfen geçerli uzantıya sahip bir değer giriniz.",
+                maxlength: $.validator.format("Lütfen en fazla {0} karakter uzunluğunda bir değer giriniz."),
+                minlength: $.validator.format("Lütfen en az {0} karakter uzunluğunda bir değer giriniz."),
+                rangelength: $.validator.format("Lütfen en az {0} ve en fazla {1} uzunluğunda bir değer giriniz."),
+                range: $.validator.format("Lütfen {0} ile {1} arasında bir değer giriniz."),
+                max: $.validator.format("Lütfen {0} değerine eşit ya da daha küçük bir değer giriniz."),
+                min: $.validator.format("Lütfen {0} değerine eşit ya da daha büyük bir değer giriniz.")
+              });
+            }(jQuery));
+            var $mcj = jQuery.noConflict(true);
+          </script>
+          
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
     "></script>
   </body>
