@@ -7,32 +7,36 @@
     <meta name="author" content="Shark Ninja">
     <title>Ninja Karaca</title>
 
-
-    <style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-}
-.bg-imgshark {
-  background-image: url("images/sharkninjabg-img.jpg");
-  background-repeat: no-repeat;
-  background-position: bottom;
-  background-size: cover;
-}
-    </style>
-
     <!-- Custom styles for this demo page -->
     <link href="styles/main.css" rel="stylesheet">
+    <style>
+      #video-background {
+  min-width: 100%; 
+  min-height: 100%;
+  z-index: -1;
+}
+
+    </style>
   </head>
   <body>
 
-<main class="container-fluid min-vh-100 d-flex text-white bg-imgshark text-sm-start">
+    <header>
+      <div class="position-absolute top-50 w-100">
+          <h1 class="text-white text-center">Overlay Text</h1>
+      </div>
+      <video autoplay muted loop id="myVideo">
+        <source src="video/shark-ninja-video-bg" type="video/mp4">
+    </video>
+  </header>
+
+<!-- <main class="container-fluid min-vh-100 d-flex bg-imgshark text-white text-sm-start">
   <div class="col-md-8 p-lg-1 p-sm-5 mx-auto my-5">
       <h1 class="display-4 fw-normal opacity-0">Shark Ninja</h1>
       <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
       <h4>Build for life <br>Made for you.</h4>
       <h4 class="m-5 p-5 text-center fs-1">Coming Soon</h4>
   </div>
-</main>
+</main> -->
 
     <!-- Some Bootstrap components require JavaScript. This file powers those components, but you should customize it so that
          it includes only the modules your site needs. That will reduce file size and speed up page loads. -->
