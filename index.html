@@ -49,7 +49,6 @@
       #mc_embed_signup {
       clear: left;
       font: 14px Helvetica, Arial, sans-serif;
-      width: 400px;
     }
 
     #mc-embedded-subscribe-form input[type=checkbox] {
@@ -62,9 +61,6 @@
 }
     #mergeRow-gdpr {
       margin-top: 20px;
-    }
-    #mc_embed_shell {
-      display: inline-block;
     }
 
     #mergeRow-gdpr fieldset label {
@@ -92,7 +88,13 @@
 }
 @media (max-width: 767.98px) {
     .mt-mobile {
-        margin-top: 100px; /* İstediğiniz değeri buraya girin */
+        margin-top: 80px;
+    }
+    #mc_embed_shell {
+      width: 100% !important;
+    }
+    #mc_embed_signup {
+      width: 100% !important;
     }
 }
     </style>
@@ -106,18 +108,18 @@
         <source src="video/shark-ninja-video-bg.mp4" type="video/mp4">
       </video>
 
-        <div class="overlayText col-md-6 p-lg-1 p-sm-5 mx-auto">
+        <div class="overlayText col-md-5 p-lg-1 p-sm-5 mx-auto">
           <h1 class="display-4 fw-normal opacity-0">Shark Ninja</h1>
           <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
           <h4>Build for life. <br>Made for you.</h4>
         </div>
         <div class="overlayText col-md-6 p-lg-1 p-sm-5 mx-auto mt-mobile text-center">
-          <h2 class="fs-2">ÇOK YAKINDA TÜRKİYE'DE</h2>
+          <h2 class="fs-2 mb-5 mt-4">ÇOK YAKINDA TÜRKİYE'DE</h2>
 
-          <div id="mc_embed_shell">
-            <div id="mc_embed_signup">
+          <div class="mx-auto p-lg-5 p-1 w-50" id="mc_embed_shell">
+            <div class="w-75 mx-auto" id="mc_embed_signup">
               <form action="https://sharkninja.us22.list-manage.com/subscribe/post?u=f9e07c8a8541fb4af3063fb10&amp;id=ddedd24029&amp;v_id=20&amp;f_id=0050c8e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank">
+                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0" target="_blank">
                 <div id="mc_embed_signup_scroll">
                   <h2 class="fw-normal">Fırsatlardan İlk Siz Haberdar Olun</h2>
                   <div class="mc-field-group w-100">
@@ -130,17 +132,19 @@
                   </div>
                   <div id="mergeRow-gdpr w-100" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
                     <div class="content__gdpr">
-                      <label>İletişim Onayı</label>
                       <p></p>
                       <fieldset class="mc_fieldset gdprRequired mc-field-group form-check" name="interestgroup_field">
                         <label class="checkbox subfield form-check-label" for="gdpr_465">
                           <input type="checkbox" id="gdpr_465" name="gdpr[465]" class="gdpr form-check-input" value="Y">
-                          <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                           <u>Açık Rıza ve Aydınlatma metnini</u> okudum, onaylıyorum.
+                          <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#rizametni">
+                           <u>Açık Rıza metnini</u> okudum, onaylıyorum.
                           </a>
                         </label>
                       </fieldset>
                       <p></p>
+                      <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#aydinlatmametni">
+                        <u>Aydınlatma metnini</u> incele.
+                       </a>
                     </div>
                   </div>
                   <div hidden>
@@ -154,7 +158,7 @@
                     <input type="text" name="b_f9e07c8a8541fb4af3063fb10_ddedd24029" tabindex="-1" value="">
                   </div>
                   <div class="clear">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-light w-100" value="Gönder">
+                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-light w-100 btn-lg" value="Gönder">
                   </div>
                 </div>
                 
@@ -165,7 +169,7 @@
         </div>
     </header>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="rizametni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
@@ -183,6 +187,23 @@
             
             Tarafınıza ticari elektronik ileti gönderilmesine ilişkin açık rızanızın olmaması durumunda her zaman Şirketimiz ile ilgili gelişmelere, etkinliklere Facebook, Twitter, Instagram, Tiktok, Linkedin hesaplarımızdan ve internet sitemizden ulaşabilirsiniz. 
             
+            Sosyal medya hesaplar
+           <a href=" https://www.instagram.com/sharkninjatr">Instagram Shark Ninja TR</a>
+           <a href="https://www.instagram.com/ninjakitchen.tr">Instagram Ninja Kitchen TR</a>
+           <a href="https://www.instagram.com/sharkhometr">Instagram Shark Home TR</a>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="aydinlatmametni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Açık Rıza ve Aydınlatma Metni</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
             E-BÜLTEN  AYDINLATMA METNİ 
             
             Aşağıda yer alan Kişisel Verilerin İşlenmesine İlişkin Aydınlatma Metni’ni okuyarak kişisel verilerinizi işleme amaçlarımızı ve bu kapsamda haklarınızı ayrıntılarıyla incelemenizi rica ediyoruz. 
