@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="tr">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,7 @@
     <meta name="author" content="Shark Ninja">
     <title>Ninja Karaca</title>
 
-    <link href="styles/main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     <style>
       header {
@@ -85,9 +85,14 @@
   color: white;
   text-decoration: none;
 }
+.mailicon {
+  width: 12%;
+  margin-top: -5px;
+  margin-left: 5px;
+}
 @media (max-width: 767.98px) {
     .mt-mobile {
-        margin-top: 30px !important;
+        margin-top: 26px !important;
     }
     .mt-mobile10 {
         margin-top: 10px !important;
@@ -102,154 +107,219 @@
     #mc_embed_signup {
       width: 100% !important;
     }
+    .videoO {
+      --bs-aspect-ratio: 100% !important;
+    }
+    .scroller__wrapper {
+      margin-top: 1rem !important;
+    }
+    .scroller__wrapper {
+      --scrolling-gallery-item-duration: 10s !important;
+  --scrolling-gallery-items-visible: 2 !important;
+  margin-top: 30px !important;
+    }
+    .scroller__item {
+    width: 100% !important;
+    }
+    .scroller__item button {
+      font-size: 14px !important;
+    }
+
+}
+
+.scroller__wrapper {
+  /* How long one slide is visible on screen (from entering screen to leaving it) */
+  --scrolling-gallery-item-duration: 20s;
+  /* How many items we want to see on screen at once */
+  --scrolling-gallery-items-visible: 6;
+  /* How many items are to scroll */
+  --scrolling-gallery-items-total: 195;
+  margin-top: 4.25em;
+  overflow: hidden;
+  will-change: transform;
+}
+
+.scroller {
+  animation-duration: calc(var(--scrolling-gallery-item-duration, 1s) / var(--scrolling-gallery-items-visible) * var(--scrolling-gallery-items-total));
+  animation-timing-function: linear;
+  animation-name: scrolling-gallery;
+  animation-iteration-count: infinite;
+  display: flex;
+  white-space: nowrap;
+}
+
+.scroller__container {
+  /* Without this, scroll will jump on desktop if any vertical scrollbar is shown */
+  width: 100vw;
+}
+
+.scroller__item {
+  flex: 1 0 calc(100% / var(--scrolling-gallery-items-visible));
+  /* Without this, block elements will take width from their contents and thus making wrong calculations,
+     so this just force elements to take only exact part of the container (screen) and equal for all */
+  width: 0px;
+  /* If you want to have it continuous without any spaces, remove two lines below */
+  box-sizing: border-box;
+  padding: 0.5em;
+}
+
+@keyframes scrolling-gallery {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(var(--scrolling-gallery-items-total) * -100vw / var(--scrolling-gallery-items-visible)));
+  }
+}
+
+.scroller:hover,
+.scroller:focus {
+  animation-play-state: paused;
 }
     </style>
   </head>
   <body>
 
-    <header class="container-fluid text-black">
-  
-      <div class="col-md-3 mx-auto mt-5 mt-mobile10">
-        <h1 class="display-4 fw-normal d-none">Shark Ninja</h1>
-        <img class="img-fluid" src="/images/SharkNinja_logo-png.png" alt="Shark Ninja">
-        <h4 class="fs-6">Build for life. <br>Made for you.</h4>
-        <h2 class="fs-2 mb-1 mt-5 text-center">ÇOK YAKINDA TÜRKİYE'DE</h2>
+    <header class="container-fluid">
+      <div class="row d-flex align-items-center text-white bg-black pb-2 pt-2">
+        <div class="col-8 mx-auto col-md-2 mt-mobile10">
+          <h1 class="display-4 fw-normal d-none">Shark Ninja</h1>
+          <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
+          <h6 class="fs-6">Build for life. Made for you.</h6>
+        </div>
+        <div class="col-12 col-md-8 mt-mobile">
+          <h2 class="fs-3 text-center">ÇOK YAKINDA TÜRKİYE'DE</h2>
+        </div>
+        <div class="col-12 col-md-2 text-end takiptekalBtn d-none d-lg-block d-md-block">
+          <button style="border-color:#008480; color:#008480; " class="rizametin btn btn-md btn-lg w-50 fw-medium" href="#" data-bs-toggle="modal" data-bs-target="#takiptekal">
+            TAKİPTE KAL
+          </button>
+        </div>
       </div>
     </header>
 
-    <div class="container-fluid mt-5">
-      <div class="col-12 d-flex">
-        <video controls playsinline="playsinline" autoplay="autoplay" muted="false" loop="loop" class="mx-auto w-75 rounded-5 w-m-100">
-          <source src="video/SN-bg-video-720p.mp4" type="video/mp4">
-        </video>
-      </div>
-      <div class="col-12">
-        <div class="col-md-6 p-lg-1 p-sm-5 mx-auto mt-mobile text-center">
-
-          <div class="mx-auto p-lg-5 p-1 w-50" id="mc_embed_shell">
-            <div class="w-75 mx-auto" id="mc_embed_signup">
-              <form action="https://sharkninja.us22.list-manage.com/subscribe/post?u=f9e07c8a8541fb4af3063fb10&amp;id=ddedd24029&amp;v_id=20&amp;f_id=0050c8e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0" target="_blank">
-                <div id="mc_embed_signup_scroll">
-                  <h2 class="fw-normal">İlk Siz Haberdar Olun</h2>
-                  <div class="mc-field-group w-100">
-                    <label for="mce-EMAIL">E-posta Adresi <span class="asterisk">*</span></label>
-                    <input type="email" name="EMAIL" class="required email form-control form-control-lg rounded-5" id="mce-EMAIL" required value="">
-                  </div>
-                  <div class="mc-field-group w-100 mt-2">
-                    <label for="mce-FNAME">Ad Soyad</label>
-                    <input type="text" name="FNAME" class="text form-control form-control-lg rounded-5" id="mce-FNAME" value="">
-                  </div>
-                  <div id="mergeRow-gdpr w-100" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
-                    <div class="content__gdpr">
-                      <p></p>
-                      <fieldset class="mc_fieldset gdprRequired mc-field-group form-check" name="interestgroup_field">
-                        <label class="checkbox subfield form-check-label" for="gdpr_465">
-                          <input type="checkbox" id="gdpr_465" name="gdpr[465]" class="gdpr form-check-input" value="Y">
-                          <a class="rizametin text-black" href="#" data-bs-toggle="modal" data-bs-target="#rizametni">
-                           <u>Açık Rıza metnini</u> okudum, onaylıyorum.
-                          </a>
-                        </label>
-                      </fieldset>
-                      <p></p>
-                      <a class="rizametin text-black" href="#" data-bs-toggle="modal" data-bs-target="#aydinlatmametni">
-                        <u>Aydınlatma metnini</u> incele.
-                       </a>
-                    </div>
-                  </div>
-                  <div hidden>
-                    <input type="hidden" name="tags" value="5148">
-                  </div>
-                  <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none;"></div>
-                    <div class="response" id="mce-success-response" style="display:none;"></div>
-                  </div>
-                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                    <input type="text" name="b_f9e07c8a8541fb4af3063fb10_ddedd24029" tabindex="-1" value="">
-                  </div>
-                  <div class="clear">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-dark bg-black border-0 w-100 btn-lg rounded-5 fs-6" value="Gönder">
-                  </div>
-                </div>
-                
-              </form>
-            </div>
-          </div>
-
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12 ratio videoO" style="--bs-aspect-ratio: 32%;">
+          <video controls playsinline="playsinline" autoplay="autoplay" muted="false" loop="loop" class="mx-auto object-fit-cover">
+            <source src="video/SN-bg-video-720p.mp4" type="video/mp4">
+          </video>
         </div>
       </div>
     </div>
 
 
- 
+<!-- Scroller -->
+<section class="scroller__wrapper">
+  <div class="scroller__container">
+    <div class="scroller">
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Saç Kurutucular</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Bahçe Mangalı</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Air Fryer</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Hava Temizleyiciler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Dondurma Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Kahve Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Doğrayıcılar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Mutfak Robotları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tost Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tencereler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Waffle Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çatal Kaşık Bıçak Takımları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çoklu Ocaklar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Elektrikli Su Isıtıcıları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Saç Kurutucular</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Bahçe Mangalı</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Air Fryer</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Hava Temizleyiciler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Dondurma Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Kahve Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Doğrayıcılar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Mutfak Robotları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tost Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tencereler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Waffle Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çatal Kaşık Bıçak Takımları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çoklu Ocaklar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Elektrikli Su Isıtıcıları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Saç Kurutucular</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Bahçe Mangalı</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Air Fryer</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Hava Temizleyiciler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Dondurma Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Kahve Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Doğrayıcılar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Mutfak Robotları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tost Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tencereler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Waffle Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çatal Kaşık Bıçak Takımları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çoklu Ocaklar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Elektrikli Su Isıtıcıları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Saç Kurutucular</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Bahçe Mangalı</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Air Fryer</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Hava Temizleyiciler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Dondurma Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Kahve Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Doğrayıcılar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Mutfak Robotları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tost Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Tencereler</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Waffle Makineleri</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çatal Kaşık Bıçak Takımları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Çoklu Ocaklar</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Elektrikli Su Isıtıcıları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+      <div class="scroller__item text-center"><button class="w-100 btn btn-lg rounded-5 border border-dark-subtle fs-4 fw-semibold text-black">Fırın Kapları</button></div>
+    </div>
+  </div>
+</section>
 
-    <!-- <header class="container-fluid min-vh-100 text-white">
-      <div class="overlay"></div>
-  
-      <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop" class="position-absolute end-0 bottom-0 h-auto w-auto">
-        <source src="video/SN-bg-video-720p.mp4" type="video/mp4">
-      </video>
+<div class="container-fluid d-sm-none mt-4">
+  <div class="row">
+    <div class="col-12 takiptekalBtn">
+      <button class="rizametin btn btn-md btn-lg fs-6 fw-medium w-100 bg-black" href="#" data-bs-toggle="modal" data-bs-target="#takiptekal">
+        TAKİPTE KAL
+      </button>
+    </div>
+  </div>
+</div>
 
-        <div class="overlayText col-md-5 p-lg-1 p-sm-5 mx-auto">
-          <h1 class="display-4 fw-normal opacity-0">Shark Ninja</h1>
-          <img class="img-fluid" src="/images/sharkninja.png" alt="Shark Ninja">
-          <h4>Build for life. <br>Made for you.</h4>
-        </div>
-        <div class="overlayText col-md-6 p-lg-1 p-sm-5 mx-auto mt-mobile text-center">
-          <h2 class="fs-2 mb-5 mt-4">ÇOK YAKINDA TÜRKİYE'DE</h2>
+<div class="container-fluid fixed-bottom fw-medium">
+  <footer class="py-1 my-1">
+  <div class="d-none d-lg-block d-md-block">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3 text-black">
+      <li class="nav-item">
+        <a href="https://www.instagram.com/sharkninjatr" class="text-black text-decoration-none px-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg> Shark Ninja</a>
+    </li>
+      <li class="nav-item">
+        <a href="https://www.instagram.com/sharkhometr" class="text-black text-decoration-none px-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg> Shark Home</a>
+    </li>
+      <li class="nav-item">
+        <a href="https://www.instagram.com/ninjakitchen.tr" class="text-black text-decoration-none px-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+        <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+      </svg> Ninja Kitchen</a>
+    </li>
+    </ul>
+  </div>
+    <p class="text-center text-black">© 2024 Tüm hakları saklıdır.</p>
 
-          <div class="mx-auto p-lg-5 p-1 w-50" id="mc_embed_shell">
-            <div class="w-75 mx-auto" id="mc_embed_signup">
-              <form action="https://sharkninja.us22.list-manage.com/subscribe/post?u=f9e07c8a8541fb4af3063fb10&amp;id=ddedd24029&amp;v_id=20&amp;f_id=0050c8e1f0"
-                    method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0" target="_blank">
-                <div id="mc_embed_signup_scroll">
-                  <h2 class="fw-normal">Fırsatlardan İlk Siz Haberdar Olun</h2>
-                  <div class="mc-field-group w-100">
-                    <label for="mce-EMAIL">Email Adresi <span class="asterisk">*</span></label>
-                    <input type="email" name="EMAIL" class="required email form-control form-control-lg" id="mce-EMAIL" required value="">
-                  </div>
-                  <div class="mc-field-group w-100">
-                    <label for="mce-FNAME">Ad Soyad</label>
-                    <input type="text" name="FNAME" class="text form-control form-control-lg" id="mce-FNAME" value="">
-                  </div>
-                  <div id="mergeRow-gdpr w-100" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
-                    <div class="content__gdpr">
-                      <p></p>
-                      <fieldset class="mc_fieldset gdprRequired mc-field-group form-check" name="interestgroup_field">
-                        <label class="checkbox subfield form-check-label" for="gdpr_465">
-                          <input type="checkbox" id="gdpr_465" name="gdpr[465]" class="gdpr form-check-input" value="Y">
-                          <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#rizametni">
-                           <u>Açık Rıza metnini</u> okudum, onaylıyorum.
-                          </a>
-                        </label>
-                      </fieldset>
-                      <p></p>
-                      <a class="rizametin" href="#" data-bs-toggle="modal" data-bs-target="#aydinlatmametni">
-                        <u>Aydınlatma metnini</u> incele.
-                       </a>
-                    </div>
-                  </div>
-                  <div hidden>
-                    <input type="hidden" name="tags" value="5148">
-                  </div>
-                  <div id="mce-responses" class="clear">
-                    <div class="response" id="mce-error-response" style="display:none;"></div>
-                    <div class="response" id="mce-success-response" style="display:none;"></div>
-                  </div>
-                  <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                    <input type="text" name="b_f9e07c8a8541fb4af3063fb10_ddedd24029" tabindex="-1" value="">
-                  </div>
-                  <div class="clear">
-                    <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-light w-100 btn-lg" value="Gönder">
-                  </div>
-                </div>
-                
-              </form>
-            </div>
-          </div>
-
-        </div>
-    </header> -->
+</footer>
+</div>
 
     <!-- Modal -->
     <div class="modal fade" id="rizametni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -279,6 +349,69 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="takiptekal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">İlk Siz Haberdar Olun</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div id="mc_embed_shell">
+              <div id="mc_embed_signup">
+                <form action="https://sharkninja.us22.list-manage.com/subscribe/post?u=f9e07c8a8541fb4af3063fb10&amp;id=ddedd24029&amp;v_id=20&amp;f_id=0050c8e1f0"
+                      method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate m-0" target="_blank">
+                  <div id="mc_embed_signup_scroll">
+                    <div class="mc-field-group w-100">
+                      <label for="mce-EMAIL">E-posta Adresi <span class="asterisk">*</span></label>
+                      <input type="email" name="EMAIL" class="required email form-control form-control-lg rounded-5" id="mce-EMAIL" required value="">
+                    </div>
+                    <div class="mc-field-group w-100 mt-2">
+                      <label for="mce-FNAME">Ad Soyad</label>
+                      <input type="text" name="FNAME" class="text form-control form-control-lg rounded-5" id="mce-FNAME" value="">
+                    </div>
+                    <div id="mergeRow-gdpr w-100" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
+                      <div class="content__gdpr">
+                        <p></p>
+                        <fieldset class="mc_fieldset gdprRequired mc-field-group form-check" name="interestgroup_field">
+                          <label class="checkbox subfield form-check-label" for="gdpr_465">
+                            <input type="checkbox" id="gdpr_465" name="gdpr[465]" class="gdpr form-check-input" value="Y">
+                            <a class="rizametin text-black" href="#" data-bs-toggle="modal" data-bs-target="#rizametni">
+                             <u>Açık Rıza metnini</u> okudum, onaylıyorum.
+                            </a>
+                          </label>
+                        </fieldset>
+                        <p></p>
+                        <a class="rizametin text-black" href="#" data-bs-toggle="modal" data-bs-target="#aydinlatmametni">
+                          <u>Aydınlatma metnini</u> incele.
+                         </a>
+                         <p></p>
+                      </div>
+                    </div>
+                    <div hidden>
+                      <input type="hidden" name="tags" value="5148">
+                    </div>
+                    <div id="mce-responses" class="clear">
+                      <div class="response" id="mce-error-response" style="display:none;"></div>
+                      <div class="response" id="mce-success-response" style="display:none;"></div>
+                    </div>
+                    <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                      <input type="text" name="b_f9e07c8a8541fb4af3063fb10_ddedd24029" tabindex="-1" value="">
+                    </div>
+                    <div class="clear">
+                      <input type="submit" name="subscribe" id="mc-embedded-subscribe" class="btn btn-primary btn-dark bg-black border-0 w-100 btn-lg rounded-5" value="Gönder">
+                    </div>
+                  </div>
+                  
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="modal fade" id="aydinlatmametni" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-scrollable">
         <div class="modal-content">
@@ -380,5 +513,6 @@
           
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js
     "></script>
+
   </body>
 </html>
